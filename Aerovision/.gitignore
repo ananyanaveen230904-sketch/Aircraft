@@ -1,0 +1,23 @@
+# Secrets - NEVER commit
+.env
+
+__pycache__/
+*.pyc
+.venv/
+venv/
+env/
+.streamlit/secrets.toml
+
+# Trained model weights (large binary, don't commit by default)
+models/*.pt
+
+# Training run outputs
+runs/
+
+# OS/editor
+.DS_Store
+.vscode/settings.json
+*.egg-info/
+
+# Evaluation outputs (regenerate with run_eval)
+output/eval/

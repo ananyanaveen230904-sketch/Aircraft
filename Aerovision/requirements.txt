@@ -1,0 +1,27 @@
+# Core
+numpy>=1.26
+opencv-python>=4.9
+Pillow>=10.2
+
+# Dashboard
+streamlit>=1.32,<2
+pandas>=2.2
+matplotlib>=3.8
+
+# Deep learning (optional - only needed if you train/use a YOLOv8 model)
+# Comment out if you only want the classical CV fallback detector
+ultralytics>=8.1
+torch>=2.2
+
+# Predictive maintenance (RUL / LSTM module, src/rul/)
+# Reuses torch (above) instead of adding TensorFlow as a second DL framework
+scikit-learn>=1.4
+
+# --- Maintenance Copilot (LLM + RAG + agent) ---
+pydantic>=2.5
+python-dotenv>=1.0
+groq>=0.9                      # Llama 3.3 70B: agent + report generation
+google-generativeai>=0.8       # Gemini: vision second opinion + LLM-as-judge
+sentence-transformers>=2.7     # RAG embeddings (falls back to TF-IDF if not installed)
+faiss-cpu>=1.8                 # vector index (falls back to numpy if not installed)
+pytest>=8.0                    # tests
